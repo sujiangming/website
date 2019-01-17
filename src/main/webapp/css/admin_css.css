@@ -1,0 +1,260 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	/*超出body范围部分隐藏*/
+	overflow: hidden;
+}
+
+header {
+	width: 100%;
+	height: 50px;
+	background: #008EBC;
+}
+
+header .header_wrapper {
+	position: relative;
+	color: #F1F1F1;
+	height: 100%;
+	width: auto;
+	line-height: 50px;
+	padding-left: 12px;
+}
+
+.header_wrapper img {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.header_wrapper_lastchild {
+	margin-right: 12px;
+	width: auto;
+	height: 100%;
+	text-align: center;
+	float: right;
+}
+
+section {
+	width: 100%;
+	height: 100%;
+	background: #C7DDEF;
+	position: relative;
+}
+
+section .left_menu {
+	width: 10%;
+	height: 100%;
+	background: #263236;
+	float: left;
+}
+
+section .right_content {
+	width: 90%;
+	height: 100%;
+	background: #F4F4F5;
+	float: right;
+	position: relative;
+}
+
+.ul_css {
+	height: auto;
+	width: 100%;
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	padding-top: 15px;
+}
+
+.ul_css li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+	margin-bottom: 1px;
+}
+
+table {
+	table-layout: fixed;
+	/*  border-collapse: 表示边框是否合并*/
+	border-collapse: collapse;
+	background: white;
+	border: 1px solid #DDDDDD;
+	margin: 0 auto;
+	margin-left: 12px;
+	margin-right: 12px;
+	margin-top: 20px;
+}
+
+thead th {
+	width: 10%;
+}
+
+thead th:nth-child(10) {
+	width: 20%;
+}
+
+th,
+td {
+	padding: 10px;
+	text-align: center;
+}
+
+tr {
+	border: 1px solid #DDDDDD;
+}
+
+td {
+	width: 10%;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #FAFAFA;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #FFFFFF;
+}
+
+
+/*新增弹出-样式-开始*/
+
+#add_window {
+	width: 100%;
+	height: 90%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	overflow-y: scroll;
+	display: none;
+}
+
+#add_window .first_div {
+	width: 50%;
+	height: 90%;
+	background: white;
+	position: relative;
+	top: 4%;
+	left: 25%;
+	border-radius: 10px;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+}
+
+.first_div .first_first_div {
+	height: 50%;
+	width: 100%;
+}
+
+.add_window_content_top {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	position: relative;
+	border-bottom: 1px solid #F5F5F5;
+}
+
+.add_window_content_top font {
+	float: left;
+	margin-left: 12px;
+	font-size: 16px;
+	color: #353535;
+	font-weight: bold;
+}
+
+.add_window_content_top img {
+	width: 25px;
+	height: 25px;
+	float: right;
+	margin-right: 12px;
+}
+
+.add_window_desc {
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	color: #353535;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.add_window_desc font {
+	width: 40%;
+	margin-right: 12px;
+}
+
+.add_window_desc input {
+	width: 59.5%;
+	height: 30px;
+	border: 1px solid #E5E5E5;
+	background: #FBFBFB;
+}
+
+.add_window_desc select {
+	width: 60%;
+	height: 33px;
+	border: 1px solid #E5E5E5;
+	background: #FBFBFB;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	padding-right: 14px;
+}
+
+input,
+button,
+select,
+textarea {
+	outline: none;
+	padding: 0;
+	margin: 0;
+}
+
+textarea {
+	resize: none;
+}
+
+
+/*新增弹出-样式-结束*/
+
+button {
+	/*消除button的默认样式*/
+	margin: 0;
+	padding: 0;
+	border: 1px solid transparent;
+	/*//自定义边框*/
+	outline: none;
+	/*消除默认点击蓝色边框效果*/
+	width: 60px;
+	height: 35px;
+	background: #209e85;
+	border-radius: 5px;
+	color: white;
+}
+
+
+/*下拉选择框-样式-开始*/
+
+
+/*
+select {
+	/*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+
+
+}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+
+/*select::-ms-expand {
+	display: none;
+}*/
+
+/*下拉选择框-样式-結束*/

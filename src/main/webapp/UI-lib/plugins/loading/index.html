@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<link rel="stylesheet" href="load.css"  media="all">
+		<script src="load-min.js" charset="utf-8"></script>
+		<style>
+			button{
+				outline: none;
+				padding: 5px 15px;
+				border: 1px solid #eee;
+				background-color: #FFFFFF;
+				border-radius: 5px;
+				font-size: 12px;
+			}
+			button:hover{
+				cursor: pointer;
+			}
+			
+			.test_mask{
+				width: 800px;
+				height: 300px;
+				border: 1px solid #BCE8F1;
+			}
+		</style>
+	</head>
+	<body>
+			<button onclick="mask_fullscreen()">数据加载-全屏(1s自动关闭)</button>
+			<button onclick="mask_element()">数据加载-指定元素(3s自动关闭)</button>
+			<button onclick="mask_element_continuious()">数据加载-指定元素(不自动关闭)</button>
+			<button onclick="mask_close()">关闭指定元素加载层</button>
+			<button onclick="mask_close_all()">关闭所有加载层</button>
+			<hr />
+			<div>自动关闭:</div>
+			<div id = "test_mask" class="test_mask">
+			</div>
+			<br>
+			<div>不自动关闭:</div>
+			<div id = "test_mask_2" class="test_mask">
+			</div>
+	</body>
+	<script type="text/javascript">
+		//加载层-全屏
+		function mask_fullscreen(){
+			$.mask_fullscreen(1000);
+			
+		}
+		//加载层-指定元素
+		function mask_element(){
+			$.mask_element('#test_mask', 3000);
+		}
+		//加载层-指定元素:不自动关闭
+		function mask_element_continuious(){
+			$.mask_element('#test_mask_2');
+		}
+		//关闭指定元素加载层
+		function mask_close(){
+			$.mask_close('#test_mask_2');
+		}
+		//关闭所有加载层
+		function mask_close_all(){
+			$.mask_close_all();
+		}
+	</script>
+</html>

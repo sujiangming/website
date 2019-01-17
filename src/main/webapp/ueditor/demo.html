@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>ueditor demo</title>
+	
+</head>
+
+<body>
+	<p><img src="http://localhost:8080/ueditor1_4_3-utf8-jsp/ueditor/jsp/upload/image/20181212/1544624352413094349.jpg" title="1544624352413094349.jpg" alt="111.jpg"/></p>
+	<form action="server.php" method="post">
+        <!-- 加载编辑器的容器 -->
+        <script id="container" name="content" type="text/plain">
+            这里写你的初始化内容
+        </script>
+    </form>
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="ueditor.all.min.js"></script>
+	<!-- UParse文件 -->
+    <script type="text/javascript" src="ueditor.parse.min.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('container', {
+				autoHeight: false
+		});
+		
+		//对编辑器的操作最好在编辑器ready之后再做
+		ue.ready(function() {
+			//设置编辑器的内容
+			ue.setContent('hello');
+			//获取html内容，返回: <p>hello</p>
+			var html = ue.getContent();
+			//获取纯文本内容，返回: hello
+			var txt = ue.getContentTxt();
+		});
+		
+		uParse('.content', {
+			rootPath: '../'
+		})
+    </script>
+	
+</body>
+
+</html>
