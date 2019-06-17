@@ -28,7 +28,7 @@ public class UserController {
 	UserService userService;
 
 	/**
-	 * 查询所有数据
+	 * @category 查询所有数据
 	 * 
 	 * @param para
 	 * @param request
